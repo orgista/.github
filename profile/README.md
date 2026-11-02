@@ -23,5 +23,5 @@ We build native apps for Android, Apple platforms, TVs, and XR headsets. Each on
 - **[OpenQR](https://github.com/orgista/openQR)**, a QR code reader for Meta Quest 3 and 3S. Free on the [Meta Horizon Store](https://www.meta.com/experiences/openqr/1236442736226659/).
 - **[oDisk](https://github.com/orgista/odisk)**, drive health and speed tests for macOS.
 - **[OpenStream](https://github.com/orgista/openstream-apple)**, a media player for your own sources on Apple devices.
-- **[OpenPanel](https://github.com/orgista/openpanel)**, a managed kiosk launcher for Android tablets, Google TV, and XR headsets.
+- **[OpenPanel](https://github.com/orgista/openpanel-releases)**, a managed kiosk launcher for Android tablets, Google TV, and XR headsets.
 - **[OpenPDF](https://github.com/orgista/openPDF)**, a PDF reader for Meta Quest.

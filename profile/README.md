@@ -25,3 +25,5 @@ We build native apps for Android, Apple platforms, TVs, and XR headsets. Each on
 - **[OpenStream](https://github.com/orgista/openstream-apple)**, a media player for your own sources on Apple devices.
 - **[OpenPanel](https://github.com/orgista/openpanel-releases)**, a managed kiosk launcher for Android tablets, Google TV, and XR headsets.
 - **[OpenPDF](https://github.com/orgista/openPDF)**, a PDF reader for Meta Quest.
+
+Every app ships through GitHub Releases with notes, checksums and attestations, on the cadence described in our [release process](https://github.com/orgista/.github/blob/main/RELEASING.md). Report security issues privately; see the [security policy](https://github.com/orgista/.github/blob/main/SECURITY.md).

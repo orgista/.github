@@ -17,7 +17,7 @@ How orgista apps are versioned, built and published, and what users can expect.
 ## Where builds come from
 
 Release builds are made and signed on our build Mac, never on a hosted CI runner, so signing keys
-never leave it. GitHub Actions only checks pull requests (CI, CodeQL, Scorecard) and, once a release is
+never leave it. GitHub Actions only checks pull requests and `main` (CI, CodeQL, Scorecard) and, once a release is
 published, checks its files against `SHA256SUMS` and attests them (`release-attest.yml`). The
 attestation proves a file is the one published in that repository's release; it does not describe the
 build machine.
@@ -51,6 +51,7 @@ Each public repository has the same baseline, modelled on
 - Squash merge only; branches are deleted after merge.
 - Dependabot alerts and security updates, weekly grouped version updates, secret scanning with push
   protection, private vulnerability reporting.
-- Workflows: `ci.yml` (where the project builds on a hosted runner), `codeql.yml`, `scorecard.yml`,
+- CodeQL default setup (it picks the languages, including Swift and the workflows themselves).
+- Workflows: `ci.yml` (where the project builds on a hosted runner), `scorecard.yml` and
   `release-attest.yml`. Actions are pinned to commit SHAs and run with read-only tokens by default.
 - Community files come from this repository unless a project has its own.

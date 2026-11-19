@@ -8,6 +8,7 @@ Thanks for helping. These rules apply to every orgista repository; a repository'
 - Search existing issues first.
 - Bug reports need the app version, device and OS, and steps to reproduce.
 - Security problems go through private reporting, see [SECURITY.md](SECURITY.md).
+- Everyone taking part follows the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## Pull requests
 
@@ -21,7 +22,11 @@ Thanks for helping. These rules apply to every orgista repository; a repository'
 ## Automation you will see
 
 - **CI** builds and tests every pull request.
-- **CodeQL** scans the code and the workflows; **OpenSSF Scorecard** checks the repository setup weekly.
-- **Dependabot** opens grouped dependency and GitHub Actions updates every week.
-- **Copilot code review** comments on pull requests to the default branch. Treat it as a second reader;
-  a maintainer still reviews.
+- **Dependency review** fails a pull request that adds a dependency with a known high-severity
+  vulnerability or a license outside the repository's allow-list.
+- **CodeQL** scans the code; **zizmor** audits the GitHub Actions workflows; **OpenSSF Scorecard**
+  checks the repository setup weekly. Findings appear under Security > Code scanning.
+- **Gradle wrapper validation** (Android repositories) checks that `gradle-wrapper.jar` is an official release.
+- **Dependabot** opens grouped dependency and GitHub Actions updates every week, and security updates
+  as soon as an advisory is published.
+- **CODEOWNERS** requests a review from the maintainer on every pull request.

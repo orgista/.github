@@ -47,11 +47,18 @@ build machine.
 Each public repository has the same baseline, modelled on
 [cyberbanksy/.eml](https://github.com/cyberbanksy/.eml):
 
-- `Protect main` ruleset: no force pushes, no deleting `main`, Copilot code review on pull requests.
+- `Protect main` ruleset: no force pushes, no deleting `main`. (It also asks for Copilot code review, which
+  only runs once the account has a Copilot plan.)
 - Squash merge only; branches are deleted after merge.
 - Dependabot alerts and security updates, weekly grouped version updates, secret scanning with push
   protection, private vulnerability reporting.
 - CodeQL default setup (it picks the languages, including Swift and the workflows themselves).
-- Workflows: `ci.yml` (where the project builds on a hosted runner), `scorecard.yml` and
-  `release-attest.yml`. Actions are pinned to commit SHAs and run with read-only tokens by default.
+- Workflows: `ci.yml` (where the project builds on a hosted runner), `scorecard.yml`,
+  `release-attest.yml`, `dependency-review.yml` (vulnerable or disallowed-license dependencies),
+  `zizmor.yml` (workflow audit) and, for Gradle projects, `gradle-wrapper.yml`. Actions are pinned to
+  commit SHAs and run with read-only tokens by default.
+- README header: icon, name, a bold one-line pitch, one row of badges (CI, OpenSSF Scorecard, latest
+  release, license, platform or store), quick links, then a divider. Badges appear only where they work.
+- `SECURITY.md` links the private reporting form and explains how to verify a release; `CODEOWNERS`,
+  `.editorconfig` and `LICENSE` are in every repository.
 - Community files come from this repository unless a project has its own.

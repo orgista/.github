@@ -5,7 +5,9 @@ This policy covers every orgista repository that does not have its own `SECURITY
 ## Reporting a vulnerability
 
 Please **do not open a public issue**. Use **Report a vulnerability** on the affected repository's
-Security tab (private vulnerability reporting is on for every public repository).
+Security tab (`https://github.com/orgista/<repo>/security/advisories/new`; private vulnerability reporting
+is on for every public repository), or email **support@orgista.com**. See GitHub's guide to
+[privately reporting a vulnerability](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 
 Include the app and version, the device and OS, steps to reproduce, and the impact. You should get a
 reply within 7 days. Once a fix is released, the advisory is published with credit, unless you prefer
